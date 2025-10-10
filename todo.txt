@@ -1,0 +1,3 @@
+add images to features
+add header links
+add waitlist modal
