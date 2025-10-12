@@ -3,6 +3,7 @@ import { Zap } from "lucide-react";
 
 import logo from "../../../public/logo-no-bg.png";
 import WaitlistButton from "./WaitlistButton";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -10,15 +11,17 @@ export default function Header() {
       <div className="container mx-auto px-4 py-4 max-w-[1400px]">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center">
-            <div className="w-10 h-10 rounded-full flex items-center justify-center">
-              <Image src={logo} alt="ubenie" width={50} height={50} />
+          <Link href="/">
+            <div className="flex items-center">
+              <div className="w-10 h-10 rounded-full flex items-center justify-center">
+                <Image src={logo} alt="ubenie" width={50} height={50} />
+              </div>
+              <span className="text-xl font-bold text-gray-900">ubenie</span>
+              <span className="ml-2 px-2 py-0.5 bg-gray-100 text-gray-700 text-sm rounded border border-gray-300">
+                AI
+              </span>
             </div>
-            <span className="text-xl font-bold text-gray-900">ubenie</span>
-            <span className="ml-2 px-2 py-0.5 bg-gray-100 text-gray-700 text-sm rounded border border-gray-300">
-              AI
-            </span>
-          </div>
+          </Link>
 
           {/* Navigation */}
           {/* <nav className="hidden md:flex items-center gap-8">

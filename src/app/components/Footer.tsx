@@ -55,12 +55,12 @@ export default function Footer() {
             <h3 className="font-bold text-gray-900 text-lg mb-6">Company</h3>
             <ul className="space-y-4">
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/blog"
                   className="text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   Blog
-                </a>
+                </Link>
               </li>
               {/* <li>
                 <a

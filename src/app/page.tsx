@@ -368,7 +368,7 @@ export default function Home() {
       {/* AI Feature Section */}
       <section className="container mx-auto px-4 py-16 max-w-7xl">
         <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div className="p-8 bg-gradient-to-br from-purple-100 to-pink-100 rounded-3xl">
+          <div className="p-8 bg-pink-100 rounded-3xl">
             <div className="aspect-video bg-gray-800 rounded-2xl flex items-center justify-center">
               <div className="text-white text-4xl font-bold">AI</div>
             </div>

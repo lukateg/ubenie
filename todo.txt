@@ -1,3 +1,10 @@
 add images to features
 add header links
 add waitlist modal
+
+add posthog
+add pixel
+
+
+add posthog and  comment it out
+add blog page and publish and index it
