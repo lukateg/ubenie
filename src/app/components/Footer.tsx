@@ -54,6 +54,22 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-gray-900 text-lg mb-6">Company</h3>
             <ul className="space-y-4">
+              {/* <li>
+                  <a
+                    href="#"
+                    className="text-gray-600 hover:text-gray-900 transition-colors"
+                  >
+                    Pricing
+                  </a>
+                </li> */}
+              {/* <li>
+                  <a
+                    href="#"
+                    className="text-gray-600 hover:text-gray-900 transition-colors"
+                  >
+                    Help center
+                  </a>
+                </li> */}
               <li>
                 <Link
                   href="/blog"
@@ -62,22 +78,6 @@ export default function Footer() {
                   Blog
                 </Link>
               </li>
-              {/* <li>
-                <a
-                  href="#"
-                  className="text-gray-600 hover:text-gray-900 transition-colors"
-                >
-                  Pricing
-                </a>
-              </li> */}
-              {/* <li>
-                <a
-                  href="#"
-                  className="text-gray-600 hover:text-gray-900 transition-colors"
-                >
-                  Help center
-                </a>
-              </li> */}
               <li>
                 <Link
                   href="/privacy"

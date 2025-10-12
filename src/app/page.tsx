@@ -129,6 +129,7 @@ export default function Home() {
                 alt="mind-map"
                 width={1000}
                 height={1000}
+                priority={true}
               />
             </div>
           </div>

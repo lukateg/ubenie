@@ -24,18 +24,21 @@ export default function Header() {
           </Link>
 
           {/* Navigation */}
-          {/* <nav className="hidden md:flex items-center gap-8">
-            <button className="flex items-center gap-1 text-gray-600 hover:text-gray-900 transition-colors">
-              Getting started
-              <ChevronDown className="w-4 h-4" />
-            </button>
+          <nav className="hidden md:flex items-center gap-8">
             <a
-              href="#pricing"
+              href="#about"
               className="text-gray-600 hover:text-gray-900 transition-colors"
             >
-              Pricing
+              About
             </a>
-          </nav> */}
+
+            <a
+              href="#faq"
+              className="text-gray-600 hover:text-gray-900 transition-colors"
+            >
+              FAQ
+            </a>
+          </nav>
 
           {/* CTA Button */}
           <WaitlistButton className="bg-[#1a1a1a] text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-gray-800 transition-colors flex items-center gap-2">

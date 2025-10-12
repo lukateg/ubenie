@@ -5,8 +5,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { WaitlistProvider } from "./context/WaitlistContext";
 import WaitlistModal from "./components/WaitlistModal";
-
-import ubenie from "../../public/ubenie-fav.png";
+import { PHProvider } from "./providers/PostHogProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -76,9 +75,9 @@ export const metadata: Metadata = {
     creator: "@lukagoesindie",
   },
   icons: {
-    icon: "/ubenie-fav.png",
-    shortcut: "/ubenie-fav.png",
-    apple: "/ubenie-fav.png",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
 };
 
@@ -97,12 +96,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${jost.variable} antialiased`}
       >
-        <WaitlistProvider>
-          <Header />
-          {children}
-          <Footer />
-          <WaitlistModal />
-        </WaitlistProvider>
+        <PHProvider>
+          <WaitlistProvider>
+            <Header />
+            {children}
+            <Footer />
+            <WaitlistModal />
+          </WaitlistProvider>
+        </PHProvider>
       </body>
     </html>
   );
