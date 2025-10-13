@@ -1,15 +1,27 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, useEffect } from "react";
 import { X, Loader2, CheckCircle2 } from "lucide-react";
 import { useWaitlist } from "../context/WaitlistContext";
+import { useMetaPixel } from "../hooks/useMetaPixel";
 
 export default function WaitlistModal() {
   const { isOpen, closeModal } = useWaitlist();
+  const { trackEvent, trackCustomEvent } = useMetaPixel();
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState("");
+
+  // Track when modal is opened (user shows interest)
+  useEffect(() => {
+    if (isOpen) {
+      trackCustomEvent("WaitlistModalOpened", {
+        event_category: "Engagement",
+        event_label: "Waitlist Interest",
+      });
+    }
+  }, [isOpen, trackCustomEvent]);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -50,6 +62,13 @@ export default function WaitlistModal() {
       if (!response.ok) {
         throw new Error(data.message || "Failed to subscribe");
       }
+
+      // Track successful waitlist signup
+      await trackEvent("Lead", {
+        content_name: "Waitlist Signup",
+        content_category: "Newsletter",
+        value: 1,
+      });
 
       setIsSuccess(true);
       setEmail("");

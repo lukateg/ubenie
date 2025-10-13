@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import { WaitlistProvider } from "./context/WaitlistContext";
 import WaitlistModal from "./components/WaitlistModal";
 import { PHProvider } from "./providers/PostHogProvider";
+import { MetaPixelProvider } from "./providers/MetaPixelProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -97,12 +98,14 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${jost.variable} antialiased`}
       >
         <PHProvider>
-          <WaitlistProvider>
-            <Header />
-            {children}
-            <Footer />
-            <WaitlistModal />
-          </WaitlistProvider>
+          <MetaPixelProvider>
+            <WaitlistProvider>
+              <Header />
+              {children}
+              <Footer />
+              <WaitlistModal />
+            </WaitlistProvider>
+          </MetaPixelProvider>
         </PHProvider>
       </body>
     </html>
