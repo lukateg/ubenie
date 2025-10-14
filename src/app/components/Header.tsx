@@ -38,6 +38,13 @@ export default function Header() {
             >
               FAQ
             </a>
+
+            <Link
+              href="/blog"
+              className="text-gray-600 hover:text-gray-900 transition-colors"
+            >
+              Blog
+            </Link>
           </nav>
 
           {/* CTA Button */}

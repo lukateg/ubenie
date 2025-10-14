@@ -19,6 +19,8 @@ import grok from "../../public/logos/grok-light.svg";
 import perplexity from "../../public/logos/perplexity.svg";
 import hero from "../../public/mind-map6.webp";
 import LukaAvatar from "../../public/LukaAvatar.webp";
+import blogImage from "../../public/blog-image.png";
+// removed image import in favor of autoplay video
 
 const faqData = [
   {
@@ -69,7 +71,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 ">
       {/* Hero Section */}
-      <section className="bg-[#FEF7EC] rounded-[30px] mx-auto w-[96%] mt-4 py-12 md:py-24">
+      <section className="bg-[#FEF7EC] rounded-[30px] mx-auto w-[96%] mt-4 py-12 md:py-20">
         <div className="container mx-auto px-4 max-w-[1200px]">
           <div className="relative mb-6 inline-flex items-center gap-2 bg-secondary/70  text-[#001438] py-1.5 text-sm">
             {/* <div className="inline-flex items-center gap-2 bg-secondary/70 border border-gray-400 backdrop-blur-xl text-[#001438] rounded-full px-4 py-1.5 text-sm"> */}
@@ -86,7 +88,7 @@ export default function Home() {
               <h1 className="text-4xl md:text-6xl font-extrabold text-[#001438] leading-10 md:leading-16">
                 {/* The #1 AI-powered Waterfall Enrichment tool */}
                 {/* Grow your Traffic on Autopilot */}
-                Grow your Traffic with AI-Driven Blog Content
+                Grow Traffic with AI-Driven Blog Content
               </h1>
               <p className="text-base md:text-lg text-[#64708b] max-w-[400px]">
                 Setup quickly, and watch as optimized blog content appears,
@@ -96,9 +98,14 @@ export default function Home() {
                 that target low-competition, high-potential keywords — created,
                 optimized, and published for you with a click. */}
               </p>
-              <WaitlistButton className="bg-black text-white md:px-8 md:py-4 px-4 py-2 rounded-md font-semibold text-lg hover:bg-gray-800 transition-colors">
-                Join the waitlist 🚀
-              </WaitlistButton>
+              <div>
+                <WaitlistButton className="bg-[#2563eb] text-white md:px-8 md:py-4 px-4 py-2 font-semibold text-lg hover:bg-gray-800 transition-colors">
+                  Join the waitlist 🚀
+                </WaitlistButton>
+                <p className="text-[12px] text-[#64708b] pt-2 underline">
+                  100+ founders have joined the waitlist
+                </p>
+              </div>
 
               <div className="flex flex-row gap-4 pt-4">
                 <div className="flex items-center text-[#64708b] text-sm md:text-base">
@@ -165,60 +172,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      {/* <section className="container mx-auto px-4 py-12 max-w-7xl">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="p-6 bg-yellow-50 rounded-3xl">
-            <div className="flex items-center mb-2">
-              <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center">
-                <Rocket
-                  className="w-6 h-6 text-yellow-600"
-                  fill="currentColor"
-                />
-              </div>
-              <p className="text-2xl font-bold ml-2">85%</p>
-            </div>
-            <p className="text-gray-600 font-semibold">Email discovery</p>
-          </div>
-
-          <div className="p-6 bg-orange-50 rounded-3xl">
-            <div className="flex items-center mb-2">
-              <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
-                <HandMetal
-                  className="w-6 h-6 text-orange-600"
-                  fill="currentColor"
-                />
-              </div>
-              <p className="text-2xl font-bold ml-2">15+</p>
-            </div>
-            <p className="text-gray-600 font-semibold">Premium vendors</p>
-          </div>
-
-          <div className="p-6 bg-blue-50 rounded-3xl">
-            <div className="flex items-center mb-2">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                <Shield className="w-6 h-6 text-blue-600" fill="currentColor" />
-              </div>
-              <p className="text-2xl font-bold ml-2">100%</p>
-            </div>
-            <p className="text-gray-600 font-semibold">Safe &amp; secure</p>
-          </div>
-
-          <div className="p-6 bg-emerald-50 rounded-3xl">
-            <div className="flex items-center mb-2">
-              <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
-                <Star
-                  className="w-6 h-6 text-emerald-600"
-                  fill="currentColor"
-                />
-              </div>
-              <p className="text-2xl font-bold ml-2">4.9</p>
-            </div>
-            <p className="text-gray-600 font-semibold">Out of 894+ reviews</p>
-          </div>
-        </div>
-      </section> */}
-
       {/* Main Value Prop */}
       <section
         id="benefits"
@@ -238,22 +191,15 @@ export default function Home() {
         </div>
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="p-8 bg-emerald-50 rounded-3xl">
-            <div className="bg-white rounded-2xl p-8 shadow-md">
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <div className="h-4 bg-gray-200 rounded flex-1"></div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <div className="h-4 bg-gray-200 rounded flex-1"></div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <div className="h-4 bg-gray-200 rounded flex-1"></div>
-                </div>
-              </div>
-            </div>
+            {/* <div className="bg-white rounded-2xl p-8 shadow-md"> */}
+            <video
+              src="/table-record.mp4"
+              className="w-full h-auto rounded-2xl"
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
           </div>
 
           <div className="space-y-6">
@@ -346,21 +292,7 @@ export default function Home() {
 
           <div className="p-8 bg-yellow-50 rounded-3xl">
             <div className="bg-white rounded-2xl p-6 border-2 border-black shadow-lg">
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-blue-200 rounded-full"></div>
-                  <div className="flex-1 space-y-2">
-                    <div className="h-3 bg-gray-200 rounded w-3/4"></div>
-                    <div className="h-3 bg-gray-200 rounded w-1/2"></div>
-                  </div>
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="h-20 bg-gray-100 rounded-lg"></div>
-                  <div className="h-20 bg-gray-100 rounded-lg"></div>
-                  <div className="h-20 bg-gray-100 rounded-lg"></div>
-                  <div className="h-20 bg-gray-100 rounded-lg"></div>
-                </div>
-              </div>
+              <Image src={blogImage} alt="article" />
             </div>
           </div>
         </div>
@@ -370,9 +302,15 @@ export default function Home() {
       <section className="container mx-auto px-4 py-16 max-w-7xl">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="p-8 bg-pink-100 rounded-3xl">
-            <div className="aspect-video bg-gray-800 rounded-2xl flex items-center justify-center">
-              <div className="text-white text-4xl font-bold">AI</div>
-            </div>
+            {/* <Image src={calendarImage} alt="calendar" /> */}
+            <video
+              src="/calendar-record.mp4"
+              className="w-full h-auto rounded-2xl"
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
           </div>
 
           <div className="space-y-6">
@@ -528,11 +466,12 @@ export default function Home() {
             </div>
 
             <p className="text-lg text-gray-600 leading-relaxed pt-4">
-              I&apos;m building Ubenie in front of{" "}
+              We&apos;re building Ubenie for{" "}
               <span className="font-semibold underline">
-                thousands of people
+                hundreds of people
               </span>{" "}
-              on Twitter. Let&apos;s ship! 🚀
+              so they can skip the struggle and proceed with their business.
+              Let&apos;s rank together! 🚀
             </p>
           </div>
         </div>

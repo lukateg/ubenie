@@ -1,6 +1,6 @@
 add images to features
-add waitlist modal
 add pixel
 
+clone this project to have a clean setup for future landing pages
 
-checkout app rankpill and mock their UI and write it down and create a prototype of the app
+write down an MVP and create PRD from it and then create the mock app

@@ -93,21 +93,27 @@ Form Submitted → Lead (Standard Event) ✅ PRIMARY CONVERSION
 - `Contact` - If you add a contact form
 - `CompleteRegistration` - When you launch the full product
 
-### Conversion API (Advanced)
-For better tracking reliability (especially with iOS 14+ privacy changes), consider implementing Meta's Conversion API to send events from your server. This can be added later when you have higher traffic.
+### ✅ Conversion API (Implemented!)
+The Meta Conversion API has been fully integrated! Server-side events are now sent alongside browser pixel events for better tracking reliability, especially with iOS 14+ privacy changes. Events are automatically deduplicated using event IDs.
+
+**Documentation**: See `META_CONVERSION_API_SETUP.md` and `CONVERSION_API_QUICKSTART.md`
 
 ---
 
 ## Files Modified
 1. `/src/app/providers/MetaPixelProvider.tsx` - Meta Pixel initialization
-2. `/src/app/hooks/useMetaPixel.ts` - Custom hook for tracking
-3. `/src/app/components/WaitlistModal.tsx` - Event tracking implementation
+2. `/src/app/hooks/useMetaPixel.ts` - Custom hook for tracking (updated with eventID support)
+3. `/src/app/components/WaitlistModal.tsx` - Event tracking implementation (updated with deduplication)
 4. `/src/app/layout.tsx` - Provider integration
-5. `env.example` - Environment variable documentation
+5. `/src/app/api/subscribe/route.ts` - Server-side Conversion API integration
+6. `/src/app/utils/metaConversionAPI.ts` - Conversion API utility functions
+7. `env.example` - Environment variable documentation
 
 ---
 
 ## Documentation Files
 - `META_PIXEL_USAGE.md` - Developer guide for using Meta Pixel
 - `META_PIXEL_EVENTS.md` - This file - tracking events summary
+- `META_CONVERSION_API_SETUP.md` - Complete Conversion API setup guide
+- `CONVERSION_API_QUICKSTART.md` - Quick start guide for Conversion API
 

@@ -2,6 +2,7 @@
 
 import { useState, FormEvent, useEffect } from "react";
 import { X, Loader2, CheckCircle2 } from "lucide-react";
+import { v4 as uuidv4 } from "uuid";
 import { useWaitlist } from "../context/WaitlistContext";
 import { useMetaPixel } from "../hooks/useMetaPixel";
 
@@ -9,6 +10,7 @@ export default function WaitlistModal() {
   const { isOpen, closeModal } = useWaitlist();
   const { trackEvent, trackCustomEvent } = useMetaPixel();
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState("");
@@ -28,50 +30,51 @@ export default function WaitlistModal() {
     setIsLoading(true);
     setError("");
 
+    // Generate unique event ID for deduplication between browser pixel and server events
+    // This ensures Meta doesn't count the same event twice
+    const eventId = uuidv4();
+
+    // Track waitlist signup attempt
+    trackCustomEvent("WaitlistSignupStarted", {
+      event_category: "Conversion",
+      event_label: "Waitlist Form Submitted",
+    });
+
     try {
-      // Beehiiv API endpoint
-      const BEEHIIV_API_URL = process.env.NEXT_PUBLIC_BEEHIIV_API_URL;
-      const BEEHIIV_PUBLICATION_ID =
-        process.env.NEXT_PUBLIC_BEEHIIV_PUBLICATION_ID;
-      const BEEHIIV_API_KEY = process.env.NEXT_PUBLIC_BEEHIIV_API_KEY;
-
-      if (!BEEHIIV_API_URL || !BEEHIIV_PUBLICATION_ID || !BEEHIIV_API_KEY) {
-        throw new Error("Beehiiv configuration is missing");
-      }
-
-      const response = await fetch(
-        `${BEEHIIV_API_URL}/publications/${BEEHIIV_PUBLICATION_ID}/subscriptions`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${BEEHIIV_API_KEY}`,
-          },
-          body: JSON.stringify({
-            email: email,
-            reactivate_existing: false,
-            send_welcome_email: true,
-            utm_source: "website",
-            utm_medium: "waitlist_modal",
-          }),
-        }
-      );
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          name: name || undefined,
+          eventId, // Pass event ID for server-side Conversion API deduplication
+        }),
+      });
 
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.message || "Failed to subscribe");
+        throw new Error(data.error || "Failed to subscribe");
       }
 
-      // Track successful waitlist signup
-      await trackEvent("Lead", {
-        content_name: "Waitlist Signup",
-        content_category: "Newsletter",
-        value: 1,
-      });
+      // Track successful waitlist signup with event ID for deduplication
+      await trackEvent(
+        "Lead",
+        {
+          content_name: "Waitlist Signup",
+          content_category: "Newsletter",
+          value: 1,
+        },
+        { eventID: eventId } // Pass event ID to browser pixel
+      );
 
       setIsSuccess(true);
+
+      // Reset form after successful submission
       setEmail("");
+      setName("");
 
       // Close modal after 2 seconds
       setTimeout(() => {
@@ -79,6 +82,7 @@ export default function WaitlistModal() {
         closeModal();
       }, 2000);
     } catch (err) {
+      console.error("Subscription error:", err);
       setError(
         err instanceof Error
           ? err.message
@@ -92,6 +96,7 @@ export default function WaitlistModal() {
   const handleClose = () => {
     if (!isLoading) {
       setEmail("");
+      setName("");
       setError("");
       setIsSuccess(false);
       closeModal();
@@ -150,6 +155,24 @@ export default function WaitlistModal() {
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
+                  Name (optional)
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Your name"
+                  disabled={isLoading}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed placeholder-black text-black"
+                />
+              </div>
+
+              <div>
+                <label
                   htmlFor="email"
                   className="block text-sm font-medium text-gray-700 mb-2"
                 >
@@ -163,7 +186,7 @@ export default function WaitlistModal() {
                   placeholder="you@example.com"
                   required
                   disabled={isLoading}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="text-black placeholder-black w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                 />
               </div>
 
