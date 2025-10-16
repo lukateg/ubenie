@@ -143,17 +143,45 @@ export default function WaitlistModal() {
             {/* Header */}
             <div className="mb-6">
               <h2 className="text-3xl font-bold text-gray-900 mb-2">
-                Join the Waitlist
+                Early Bird Waitlist
               </h2>
               <p className="text-gray-600">
-                Be the first to know when Ubenie launches and get exclusive
-                early access.
+                We care about our{" "}
+                <span className="font-semibold bg-emerald-100 px-1 rounded-md">
+                  early adopters
+                </span>
+                , so we&apos;ve prepared{" "}
+                <span className="bg-emerald-100 font-semibold px-1 rounded-md">
+                  exclusive gifts
+                </span>{" "}
+                just for early birds:
+              </p>
+              <div className="mt-3 text-sm space-y-2 text-gray-600 px-2">
+                <div className="flex flex-col gap-2 relative w-fit">
+                  <div className="absolute bottom-0 left-0 w-full h-[1.5px] bg-emerald-200" />
+                  <p>🎁 Free beta access & hands-on testing</p>
+                </div>
+                <div className="flex flex-col gap-2 relative w-fit">
+                  <div className="absolute bottom-0 left-0 w-full h-[1.5px] bg-emerald-200" />
+                  <p>💸 Special early-bird discounts</p>
+                </div>
+                <div className="flex flex-col gap-2 relative w-fit">
+                  <div className="absolute bottom-0 left-0 w-full h-[1.5px] bg-emerald-200" />
+                  <p className="">🤝 Direct support & 1-on-1 consulting</p>
+                </div>
+              </div>
+              <p className="text-gray-600 text-sm mt-4">
+                <span className="font-semibold">100+</span> founders have
+                claimed their spot -{" "}
+                <span className="bg-red-100 font-semibold rounded-md px-1">
+                  don&apos;t miss yours.
+                </span>
               </p>
             </div>
 
             {/* Form */}
             <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
+              {/* <div>
                 <label
                   htmlFor="name"
                   className="block text-sm font-medium text-gray-700 mb-2"
@@ -169,7 +197,7 @@ export default function WaitlistModal() {
                   disabled={isLoading}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed placeholder-black text-black"
                 />
-              </div>
+              </div> */}
 
               <div>
                 <label
@@ -207,7 +235,7 @@ export default function WaitlistModal() {
                     Joining...
                   </>
                 ) : (
-                  "Join the Waitlist 🚀"
+                  "Start Growing on Autopilot 🚀"
                 )}
               </button>
 
