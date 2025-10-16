@@ -1,6 +1,7 @@
 export interface BlogPost {
   id: string;
   title: string;
+  shortTitle: string;
   excerpt: string;
   image: string;
   date: string;
@@ -23,6 +24,7 @@ export const blogPostsData: BlogPost[] = [
   {
     id: "automate-blog-writing-publishing",
     title: "How to Automate Blog Writing & Publishing Without Lifting a Finger",
+    shortTitle: "Automate Blog Publishing",
     excerpt:
       "Discover the ultimate guide to automating your entire blog content creation and publishing workflow. Learn how AI-powered tools can help you generate, optimize, and publish SEO-friendly blog posts automatically...",
     image: "/ubenie-full-logo.png",
@@ -40,6 +42,11 @@ export const blogPostsData: BlogPost[] = [
 
       <p>Whether you're running a personal blog, managing a corporate content strategy, or building a content empire, automating your blog workflow can save you countless hours while maintaining consistency and quality. In this comprehensive guide, we'll explore how you can leverage cutting-edge technology to create a fully automated content pipeline that works 24/7.</p>
 
+      <figure>
+        <img src="https://images.unsplash.com/photo-1591381287254-b3349c60bf9b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070" alt="Automated content workflow visualization" loading="lazy" width="1200" height="675" />
+        <figcaption>Visualizing an automated content workflow from idea to publish. Photo via <a href="https://unsplash.com/" target="_blank" rel="nofollow noopener">Unsplash</a>.</figcaption>
+      </figure>
+
       <h2>Why Automate Your Blog Writing and Publishing?</h2>
 
       <p>The benefits of automating your blog content creation and publishing workflow are <strong>transformative</strong> for content creators and businesses alike. By embracing <em>automation</em>, you can unlock unprecedented efficiency and scale your content operations without proportionally increasing your workload or team size.</p>
@@ -51,6 +58,8 @@ export const blogPostsData: BlogPost[] = [
       <p>Additionally, automation enables <strong>scalability</strong> that would be impossible with manual processes alone. You can easily expand from publishing one post per week to multiple posts per day across various topics without hiring additional writers. This scalability is particularly valuable for businesses looking to dominate their niche through content marketing.</p>
 
       <p>Finally, modern AI tools can incorporate <strong>SEO optimization</strong> automatically, ensuring every piece of content is structured to rank well in search engines. From keyword placement to meta descriptions, automation handles the technical aspects of SEO that many writers struggle with or overlook.</p>
+
+      <p>For official guidance, review <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" target="_blank" rel="nofollow noopener">Google's helpful content guidelines</a> and <a href="https://developers.google.com/search/docs/crawling-indexing/overview" target="_blank" rel="nofollow noopener">indexing best practices</a>. These resources help ensure your automated content remains high quality and discoverable.</p>
 
       <h2>Understanding the Blog Automation Ecosystem</h2>
 
@@ -106,6 +115,11 @@ export const blogPostsData: BlogPost[] = [
 
       <p><strong>Best Use Case:</strong> SEO-focused content, multilingual blogs, businesses prioritizing search rankings.</p>
 
+      <figure>
+        <img src="https://images.unsplash.com/photo-1586281380923-93c9b0a7296e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070" alt="AI-powered content automation tools dashboard" loading="lazy" width="1200" height="675" />
+        <figcaption>Dashboards orchestrate automated briefs, drafts, and scheduling. Photo via <a href="https://unsplash.com/" target="_blank" rel="nofollow noopener">Unsplash</a>.</figcaption>
+      </figure>
+
       <h2>Building Your Automated Publishing Workflow</h2>
 
       <p>Creating an effective automated blog publishing workflow requires careful planning and integration of various tools. Here's a step-by-step approach to building a system that works seamlessly:</p>
@@ -129,6 +143,8 @@ export const blogPostsData: BlogPost[] = [
       <p>For example, you can create a Zapier workflow that: 1) Monitors a Google Sheet for new blog topics, 2) Triggers an AI writing tool to generate content, 3) Sends the draft to a Google Doc for review, 4) Upon approval, automatically publishes it to WordPress, 5) Posts about it on social media, and 6) Adds the URL to your email newsletter queue.</p>
 
       <p>Make offers even more advanced capabilities with its visual workflow builder and complex logic operations. You can create conditional workflows that adapt based on content performance, automatically repurposing high-performing content into different formats or updating old posts with fresh information.</p>
+
+      <p>Explore connectors for <a href="https://zapier.com/apps" target="_blank" rel="nofollow noopener">Zapier apps</a> and <a href="https://www.make.com/en/integrations" target="_blank" rel="nofollow noopener">Make scenarios</a> to stitch your tooling together securely.</p>
 
       <h2>WordPress and CMS Integration</h2>
 
@@ -165,6 +181,8 @@ export const blogPostsData: BlogPost[] = [
       <p><strong>Internal Linking:</strong> Implement automated internal linking strategies to strengthen your site's architecture. Tools can suggest relevant internal links based on content similarity and keyword relationships.</p>
 
       <p><strong>Regular Updates:</strong> Set up workflows to periodically review and refresh older content, which signals to search engines that your site is actively maintained and current.</p>
+
+      <p>For deeper SEO fundamentals, see <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" target="_blank" rel="nofollow noopener">Google's SEO starter guide</a>.</p>
 
       <h2>Cost Analysis: ROI of Blog Automation</h2>
 
@@ -240,6 +258,7 @@ export const blogPostsData: BlogPost[] = [
   {
     id: "low-competition-keywords-2025",
     title: "Top AI Tools to Find Low Competition Keywords for 2025",
+    shortTitle: "AI Tools: Low-Competition Keywords",
     excerpt:
       "Uncover the most powerful AI-driven keyword research tools that help you discover untapped, low-competition keywords with high traffic potential. Learn advanced strategies to dominate search rankings in 2025...",
     image: "/ubenie-full-logo.png",
@@ -258,6 +277,12 @@ export const blogPostsData: BlogPost[] = [
       <p>The traditional approach to keyword research—manually sifting through data, analyzing competition, and estimating traffic potential—is being replaced by intelligent AI systems that can process millions of data points in seconds. These tools don't just show you keywords; they predict trends, identify intent patterns, and recommend entire content strategies based on comprehensive market analysis.</p>
 
       <p>This comprehensive guide will walk you through the <strong>top AI tools</strong> for finding low-competition keywords in 2025, along with strategies and best practices for leveraging these discoveries to dominate your niche.</p>
+
+      <figure>
+        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2151" alt="SEO analytics dashboard with charts" loading="lazy" width="1200" height="675" />
+        <figcaption>Discover low-competition opportunities across geographies and niches. Photo via <a href="https://unsplash.com/" target="_blank" rel="nofollow noopener">Unsplash</a>.</figcaption>
+      </figure>
+   
 
       <h2>Why Low-Competition Keywords Matter More Than Ever</h2>
 
@@ -287,7 +312,7 @@ export const blogPostsData: BlogPost[] = [
 
       <h3>1. Semrush Keyword Magic Tool</h3>
 
-      <p><strong>Semrush</strong> has long been a leader in SEO tools, and their Keyword Magic Tool leverages AI to provide one of the most comprehensive keyword databases available. With over 21 billion keywords across 130 countries, it offers unparalleled coverage for finding low-competition opportunities.</p>
+      <p><strong>Semrush</strong> has long been a leader in SEO tools, and their Keyword Magic Tool leverages AI to provide one of the most comprehensive keyword databases available. With over 21 billion keywords across 130 countries, it offers unparalleled coverage for finding low-competition opportunities. Learn more on the <a href="https://www.semrush.com/analytics/keywordmagic/start/" target="_blank" rel="nofollow noopener">Semrush Keyword Magic Tool</a> page.</p>
 
       <p><strong>Key Features:</strong> The tool uses AI to categorize keywords by intent, identify question-based keywords, group related terms into clusters, and provide detailed competition metrics including Keyword Difficulty (KD) scores that accurately reflect ranking feasibility.</p>
 
@@ -299,7 +324,7 @@ export const blogPostsData: BlogPost[] = [
 
       <h3>2. Ahrefs Keywords Explorer</h3>
 
-      <p><strong>Ahrefs</strong> combines the industry's most extensive backlink database with powerful keyword research capabilities powered by machine learning. Their Keywords Explorer tool excels at identifying low-competition opportunities through sophisticated difficulty scoring.</p>
+      <p><strong>Ahrefs</strong> combines the industry's most extensive backlink database with powerful keyword research capabilities powered by machine learning. Their Keywords Explorer tool excels at identifying low-competition opportunities through sophisticated difficulty scoring. See the <a href="https://ahrefs.com/keywords-explorer" target="_blank" rel="nofollow noopener">Ahrefs Keywords Explorer</a> overview.</p>
 
       <p><strong>Key Features:</strong> Click-through rate (CTR) data for keywords, parent topic identification, comprehensive SERP analysis, traffic potential estimates, and keyword difficulty scores that consider your site's specific authority.</p>
 
@@ -311,7 +336,7 @@ export const blogPostsData: BlogPost[] = [
 
       <h3>3. Surfer SEO Keyword Research</h3>
 
-      <p><strong>Surfer SEO</strong> takes a unique approach by integrating keyword research directly with content optimization. Its AI-powered system doesn't just find keywords—it shows you exactly how to use them for maximum ranking potential.</p>
+      <p><strong>Surfer SEO</strong> takes a unique approach by integrating keyword research directly with content optimization. Its AI-powered system doesn't just find keywords—it shows you exactly how to use them for maximum ranking potential. Explore the <a href="https://surferseo.com/" target="_blank" rel="nofollow noopener">Surfer SEO</a> platform.</p>
 
       <p><strong>Key Features:</strong> SERP analyzer that reveals exact keyword usage in top-ranking content, content editor with real-time optimization suggestions, keyword clustering for topical coverage, and difficulty scores tailored to your domain strength.</p>
 
@@ -323,7 +348,7 @@ export const blogPostsData: BlogPost[] = [
 
       <h3>4. SEMrush Topic Research</h3>
 
-      <p><strong>Topic Research</strong> from SEMrush uses AI to go beyond keywords and discover entire content topics with low competition. It analyzes what's resonating with audiences and identifies gaps in existing content coverage.</p>
+      <p><strong>Topic Research</strong> from SEMrush uses AI to go beyond keywords and discover entire content topics with low competition. It analyzes what's resonating with audiences and identifies gaps in existing content coverage. Try <a href="https://www.semrush.com/topic-research/" target="_blank" rel="nofollow noopener">SEMrush Topic Research</a>.</p>
 
       <p><strong>Key Features:</strong> AI-generated content ideas based on search behavior, subtopic suggestions with related keywords, competitor content analysis, question and headline generators, and social engagement metrics.</p>
 
@@ -335,7 +360,7 @@ export const blogPostsData: BlogPost[] = [
 
       <h3>5. AlsoAsked</h3>
 
-      <p><strong>AlsoAsked</strong> specializes in mining Google's "People Also Ask" data to uncover question-based keywords with typically lower competition. Its visualization tools make it easy to identify content opportunities within your niche.</p>
+      <p><strong>AlsoAsked</strong> specializes in mining Google's "People Also Ask" data to uncover question-based keywords with typically lower competition. Its visualization tools make it easy to identify content opportunities within your niche. Visit <a href="https://alsoasked.com/" target="_blank" rel="nofollow noopener">AlsoAsked</a>.</p>
 
       <p><strong>Key Features:</strong> Visual question mapping, deep question research across multiple layers, topic clustering, search volume and trend data, and export capabilities for content planning.</p>
 
@@ -347,7 +372,7 @@ export const blogPostsData: BlogPost[] = [
 
       <h3>6. AnswerThePublic</h3>
 
-      <p><strong>AnswerThePublic</strong> uses AI to visualize search questions and autocomplete data, revealing the exact queries people are typing into search engines. This tool excels at finding long-tail, low-competition keywords based on real user behavior.</p>
+      <p><strong>AnswerThePublic</strong> uses AI to visualize search questions and autocomplete data, revealing the exact queries people are typing into search engines. This tool excels at finding long-tail, low-competition keywords based on real user behavior. See <a href="https://answerthepublic.com/" target="_blank" rel="nofollow noopener">AnswerThePublic</a>.</p>
 
       <p><strong>Key Features:</strong> Visual keyword mapping, question-based keyword discovery, comparison and preposition-based queries, alphabetical keyword suggestions, and trend tracking over time.</p>
 
@@ -359,7 +384,7 @@ export const blogPostsData: BlogPost[] = [
 
       <h3>7. LowFruits</h3>
 
-      <p><strong>LowFruits</strong> is specifically designed to find weak spots in Google's rankings—domains with low authority ranking for valuable keywords. This laser-focused approach makes it ideal for finding truly achievable ranking opportunities.</p>
+      <p><strong>LowFruits</strong> is specifically designed to find weak spots in Google's rankings—domains with low authority ranking for valuable keywords. This laser-focused approach makes it ideal for finding truly achievable ranking opportunities. Check out <a href="https://lowfruits.io/" target="_blank" rel="nofollow noopener">LowFruits</a>.</p>
 
       <p><strong>Key Features:</strong> Weak domain identification in SERPs, keyword difficulty scoring based on ranking domain strength, wildcarding for discovering keyword patterns, and domain comparison features.</p>
 
@@ -387,6 +412,12 @@ export const blogPostsData: BlogPost[] = [
 
       <p><strong>Forum and Community Mining:</strong> AI tools can now analyze forums, Reddit, Quora, and other community platforms to identify questions and topics with search volume but limited existing content. These represent prime low-competition targets.</p>
 
+      <p>For official guidance on how Google understands topics and intent, review <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" target="_blank" rel="nofollow noopener">Google's SEO starter documentation</a>.</p>
+
+       <figure>
+        <img src="https://images.unsplash.com/photo-1686061594225-3e92c0cd51b0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2071" alt="Keyword research brainstorming on a laptop" loading="lazy" width="1200" height="675" />
+        <figcaption>Keyword research workflows enhanced by AI tools. Photo via <a href="https://unsplash.com/" target="_blank" rel="nofollow noopener">Unsplash</a>.</figcaption>
+      </figure>
       <h2>Evaluating Keyword Competition Accurately</h2>
 
       <p>Understanding how to properly assess <strong>keyword competition</strong> prevents wasted effort on unwinnable keywords while ensuring you don't overlook genuine opportunities:</p>
@@ -494,6 +525,7 @@ export const blogPostsData: BlogPost[] = [
     id: "description-to-seo-blog",
     title:
       "From Description to SEO Blog: How Automation Generates Content That Ranks",
+    shortTitle: "Description to SEO Blog",
     excerpt:
       "Master the complete workflow of transforming simple descriptions into fully optimized, ranking-ready blog content through intelligent automation. Learn the exact process top content creators use to scale their output while maintaining quality...",
     image: "/ubenie-full-logo.png",
@@ -512,6 +544,12 @@ export const blogPostsData: BlogPost[] = [
       <p>This transformation isn't magic; it's the result of sophisticated <em>AI systems</em>, strategic automation workflows, and deep SEO understanding working in concert. The most successful content operations have moved beyond manual content creation to embrace these automated processes, allowing them to scale output dramatically while maintaining or even improving quality.</p>
 
       <p>In this comprehensive guide, we'll walk through the complete journey from initial description to published, ranking blog content. You'll learn the exact workflows, tools, and strategies that enable this transformation, along with best practices for ensuring your automated content consistently ranks and resonates with your audience.</p>
+
+      <figure>
+        <img src="https://images.unsplash.com/photo-1703300450387-047da16a89c4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2832" alt="Content calendar powering automated briefs" loading="lazy" width="1200" height="675" />
+        <figcaption>Automated briefs triggered from a structured content calendar. Photo via <a href="https://unsplash.com/" target="_blank" rel="nofollow noopener">Unsplash</a>.</figcaption>
+      </figure>
+
 
       <h2>The Content Automation Paradigm Shift</h2>
 
@@ -555,11 +593,11 @@ export const blogPostsData: BlogPost[] = [
 
       <h3>SEO Research and Optimization</h3>
 
-      <p><strong>Surfer SEO</strong> analyzes top-ranking pages to create data-driven content briefs that guide AI generation toward optimal keyword usage, content length, header structure, and topic coverage. Its real-time content editor provides live feedback as content is created.</p>
+      <p><strong>Surfer SEO</strong> analyzes top-ranking pages to create data-driven content briefs that guide AI generation toward optimal keyword usage, content length, header structure, and topic coverage. Its real-time content editor provides live feedback as content is created. See <a href="https://surferseo.com/" target="_blank" rel="nofollow noopener">Surfer SEO</a>.</p>
 
-      <p><strong>Clearscope</strong> offers similar capabilities with particularly strong NLP analysis that identifies related terms and concepts to include for comprehensive topic coverage. This ensures your AI-generated content addresses all aspects search engines expect.</p>
+      <p><strong>Clearscope</strong> offers similar capabilities with particularly strong NLP analysis that identifies related terms and concepts to include for comprehensive topic coverage. This ensures your AI-generated content addresses all aspects search engines expect. Learn more at <a href="https://www.clearscope.io/" target="_blank" rel="nofollow noopener">Clearscope</a>.</p>
 
-      <p><strong>Frase</strong> combines content research with generation capabilities, allowing you to research competitors and generate optimized content in a single platform. Its AI can even pull relevant information from top-ranking pages to incorporate into your content.</p>
+      <p><strong>Frase</strong> combines content research with generation capabilities, allowing you to research competitors and generate optimized content in a single platform. Its AI can even pull relevant information from top-ranking pages to incorporate into your content. Explore <a href="https://www.frase.io/" target="_blank" rel="nofollow noopener">Frase</a>.</p>
 
       <h3>Automation Platforms</h3>
 
@@ -615,6 +653,11 @@ export const blogPostsData: BlogPost[] = [
 
       <h2>Crafting Effective Prompts for SEO Content</h2>
 
+            <figure>
+        <img src="https://images.unsplash.com/photo-1677691820099-a6e8040aa077?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1674" alt="AI-assisted blog writing on a laptop" loading="lazy" width="1200" height="675" />
+        <figcaption>From description to SEO blog with AI assistance. Photo via <a href="https://unsplash.com/" target="_blank" rel="nofollow noopener">Unsplash</a>.</figcaption>
+      </figure>
+
       <p>The quality of your automated content heavily depends on <strong>prompt engineering</strong>—how you instruct the AI to generate content. Effective prompts for SEO blog posts should include several key elements:</p>
 
       <p><strong>Context and Purpose:</strong> Clearly state what the content is for and who it's for. "Write an informational blog post for small business owners who are new to SEO and looking for beginner-friendly strategies."</p>
@@ -639,7 +682,7 @@ export const blogPostsData: BlogPost[] = [
 
       <p><strong>User Experience Optimization:</strong> Content must be readable and engaging. Automated tools can optimize for readability scores, but strategic paragraph length, varied sentence structure, effective use of formatting (bold, italics, lists), and visual content breaks all enhance user experience signals that impact rankings.</p>
 
-      <p><strong>E-A-T Signals:</strong> Establish Expertise, Authoritativeness, and Trustworthiness by including author credentials, citing authoritative sources, linking to supporting research, adding original insights or data, and maintaining factual accuracy.</p>
+      <p><strong>E-A-T Signals:</strong> Establish Expertise, Authoritativeness, and Trustworthiness by including author credentials, citing authoritative sources, linking to supporting research, adding original insights or data, and maintaining factual accuracy. See <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" target="_blank" rel="nofollow noopener">Google's guidance on helpful content</a>.</p>
 
       <p><strong>Technical SEO Elements:</strong> Ensure automation includes meta title optimization (under 60 characters, keyword-front-loaded), compelling meta descriptions (under 160 characters, includes keyword and CTA), proper header hierarchy (H1, then H2s, then H3s), descriptive image alt text, and schema markup where appropriate.</p>
 

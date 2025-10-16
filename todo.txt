@@ -1,6 +1,9 @@
-add images to features
-add pixel
 
 clone this project to have a clean setup for future landing pages
 
+check how to add image and resubmit blog to indexing
+
+add image to hero (wix, shopify, webflow, webhook)
+add 6 box sections (internal linking, image generation, etc...)
+retest, if no better results add pricing
 write down an MVP and create PRD from it and then create the mock app

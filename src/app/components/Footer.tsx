@@ -3,13 +3,14 @@ import logo from "../../../public/logo-no-bg.png";
 import Image from "next/image";
 import Link from "next/link";
 import WaitlistButton from "./WaitlistButton";
+import { blogPostsData } from "../blog/blogData";
 
 export default function Footer() {
   return (
     <footer className="w-full bg-gray-50 border-t border-gray-200 py-16">
       <div className="container mx-auto px-4 max-w-[1400px]">
         {/* Main footer grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 mb-16">
           {/* Top section with logo */}
           <div className="mb-12">
             <div className="flex items-center">
@@ -98,43 +99,23 @@ export default function Footer() {
           </div>
 
           {/* Resources */}
-          {/* <div>
-            <h3 className="font-bold text-gray-900 text-lg mb-6">Ressources</h3>
+          <div>
+            <h3 className="font-bold text-gray-900 text-lg mb-6">
+              Latest Blog Posts
+            </h3>
             <ul className="space-y-4">
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-600 hover:text-gray-900 transition-colors"
-                >
-                  Youtube Chanel
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-600 hover:text-gray-900 transition-colors"
-                >
-                  Affiliate program
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-600 hover:text-gray-900 transition-colors"
-                >
-                  Reviews
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-600 hover:text-gray-900 transition-colors"
-                >
-                  Best Skylead Alternative
-                </a>
-              </li>
+              {blogPostsData.slice(0, 4).map((post) => (
+                <li key={post.id}>
+                  <Link
+                    href={`/blog/${post.id}`}
+                    className="text-gray-600 hover:text-gray-900 transition-colors"
+                  >
+                    {post.shortTitle}
+                  </Link>
+                </li>
+              ))}
             </ul>
-          </div> */}
+          </div>
 
           {/* CTA Section */}
           <div>
