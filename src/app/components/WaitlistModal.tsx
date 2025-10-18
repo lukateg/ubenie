@@ -152,7 +152,7 @@ export default function WaitlistModal() {
                 </span>
                 , so we&apos;ve prepared{" "}
                 <span className="bg-emerald-100 font-semibold px-1 rounded-md">
-                  exclusive gifts
+                  special benefits
                 </span>{" "}
                 just for early birds:
               </p>

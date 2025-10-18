@@ -420,7 +420,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="px-4 py-20 bg-[#FEF7EC]/50">
+      <section id="benefits" className="px-4 py-20 bg-[#FEF7EC]/50">
         {/* <section className="px-4 py-16 bg-yellow-50/50"> */}
 
         {/* <section className="px-4 py-16 bg-pink-50/50"> */}

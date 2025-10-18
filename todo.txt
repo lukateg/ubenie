@@ -1,9 +1,15 @@
 
-clone this project to have a clean setup for future landing pages
 
-check how to add image and resubmit blog to indexing
+add askinpublic blog texts
 
 add image to hero (wix, shopify, webflow, webhook)
-add 6 box sections (internal linking, image generation, etc...)
-retest, if no better results add pricing
+add pricing
+add better copy to blog CTA
+
+clone this project to have a clean setup for future landing pages
+
+create adds with perplex and sora
+retest
+
+
 write down an MVP and create PRD from it and then create the mock app

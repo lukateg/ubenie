@@ -25,19 +25,19 @@ export default function Header() {
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <a
-              href="#about"
+            <Link
+              href="/#about"
               className="text-gray-600 hover:text-gray-900 transition-colors"
             >
               About
-            </a>
+            </Link>
 
-            <a
-              href="#faq"
+            <Link
+              href="/#faq"
               className="text-gray-600 hover:text-gray-900 transition-colors"
             >
               FAQ
-            </a>
+            </Link>
 
             <Link
               href="/blog"
