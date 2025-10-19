@@ -170,13 +170,13 @@ export default function WaitlistModal() {
                   <p className="">🤝 Direct support & 1-on-1 consulting</p>
                 </div>
               </div>
-              <p className="text-gray-600 text-sm mt-4">
+              {/* <p className="text-gray-600 text-sm mt-4">
                 <span className="font-semibold">100+</span> founders have
                 claimed their spot -{" "}
                 <span className="bg-red-100 font-semibold rounded-md px-1">
                   don&apos;t miss yours.
                 </span>
-              </p>
+              </p> */}
             </div>
 
             {/* Form */}

@@ -93,16 +93,14 @@ export default function Home() {
       {/* Hero Section */}
       <section className="bg-[#FEF7EC] rounded-[30px] mx-auto mt-4 py-12 md:py-20">
         <div className="container mx-auto px-4 max-w-[1200px]">
-          <div className="relative mb-6 inline-flex items-center gap-2 bg-secondary/70  text-[#001438] py-1.5 text-sm">
-            {/* <div className="inline-flex items-center gap-2 bg-secondary/70 border border-gray-400 backdrop-blur-xl text-[#001438] rounded-full px-4 py-1.5 text-sm"> */}
+          {/* <div className="relative mb-6 inline-flex items-center gap-2 bg-secondary/70  text-[#001438] py-1.5 text-sm">
             <div className="relative flex items-center justify-center">
               <div className="w-4 h-4 bg-emerald-400 rounded-full animate-ping absolute"></div>
               <div className="w-4 h-4 bg-emerald-400 rounded-full"></div>
             </div>
             <span>4 founders joined today!</span>
-            {/* <span>{Math.floor(Math.random() * 5)} founders joined today!</span> */}
             <span className="absolute bottom-0 right-0 w-full h-[2px] bg-[#001438]"></span>
-          </div>
+          </div> */}
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-6xl font-extrabold text-[#001438] leading-10 md:leading-16">
@@ -139,9 +137,9 @@ export default function Home() {
                       </div>
                     ))}
                   </div> */}
-                  <span className="text-[12px] text-[#64708b] underline">
+                  {/* <span className="text-[12px] text-[#64708b] underline">
                     100+ founders have secured their spot
-                  </span>
+                  </span> */}
                 </div>
               </div>
 
@@ -419,11 +417,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="benefits" className="px-4 py-20 bg-[#FEF7EC]/50">
-        {/* <section className="px-4 py-16 bg-yellow-50/50"> */}
+      {/* <section id="benefits" className="px-4 py-20 bg-[#FEF7EC]/50">
 
-        {/* <section className="px-4 py-16 bg-pink-50/50"> */}
         <div className="container max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -437,7 +432,6 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Auto Keywords */}
             <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow">
               <div className="mb-4">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -477,7 +471,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Auto Research */}
             <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow">
               <div className="mb-4">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -505,7 +498,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Auto Linking */}
             <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow">
               <div className="mb-4">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -532,7 +524,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Auto Images */}
             <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow">
               <div className="mb-4">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -552,7 +543,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Auto Promotion */}
             <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow">
               <div className="mb-4">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -574,7 +564,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Auto YouTube */}
             <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow">
               <div className="mb-4">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -598,7 +587,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Backlink Exchange */}
             <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow">
               <div className="mb-4">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -660,7 +648,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Integrations */}
             <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow">
               <div className="mb-4">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -731,7 +718,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* SEO/GEO Score */}
             <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow">
               <div className="mb-4">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -782,7 +768,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* about section */}
       <section id="about" className="container mx-auto px-4 py-16 max-w-3xl">
