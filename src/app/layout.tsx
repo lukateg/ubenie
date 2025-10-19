@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     title: "Ubenie - AI-Powered Traffic Builder",
     description:
       "Setup once and focus on your business, while Ubenie builds your traffic.",
-    images: ["/ubenie-full-logo.png"],
+    images: ["https://www.ubenie.com/ubenie-full-logo.png"],
     creator: "@lukagoesindie",
   },
   icons: {
