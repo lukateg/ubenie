@@ -93,21 +93,24 @@ export default function Home() {
       {/* Hero Section */}
       <section className="bg-[#FEF7EC] rounded-[30px] mx-auto mt-4 py-12 md:py-20">
         <div className="container mx-auto px-4 max-w-[1200px]">
-          {/* <div className="relative mb-6 inline-flex items-center gap-2 bg-secondary/70  text-[#001438] py-1.5 text-sm">
+          <div className="relative mb-6 inline-flex items-center gap-2 bg-secondary/70  text-[#001438] py-1.5 text-sm">
             <div className="relative flex items-center justify-center">
               <div className="w-4 h-4 bg-emerald-400 rounded-full animate-ping absolute"></div>
               <div className="w-4 h-4 bg-emerald-400 rounded-full"></div>
             </div>
-            <span>4 founders joined today!</span>
+            <span>
+              {new Date().getDate() % 2 !== 0 ? "2" : "1"} founder
+              {new Date().getDate() % 2 !== 0 ? "s" : ""} joined today!
+            </span>
             <span className="absolute bottom-0 right-0 w-full h-[2px] bg-[#001438]"></span>
-          </div> */}
+          </div>
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-6xl font-extrabold text-[#001438] leading-10 md:leading-16">
                 {/* The #1 AI-powered Waterfall Enrichment tool */}
                 {/* Grow your Traffic on Autopilot */}
-                {/* Grow Traffic with AI-Driven Blog Content */}
-                Let Us Grow Your SEO Traffic Organically
+                Grow Traffic with AI-Driven Blog Content
+                {/* Let Us Grow Your SEO Traffic Organically */}
               </h1>
               <p className="text-base md:text-lg text-[#64708b] max-w-[400px]">
                 Setup once, and watch as optimized blog content appears,
@@ -137,9 +140,10 @@ export default function Home() {
                       </div>
                     ))}
                   </div> */}
-                  {/* <span className="text-[12px] text-[#64708b] underline">
-                    100+ founders have secured their spot
-                  </span> */}
+                  <span className="text-[12px] text-[#64708b] underline">
+                    {/* 100+ founders have secured their spot */}
+                    Secure your spot - no payment required
+                  </span>
                 </div>
               </div>
 
