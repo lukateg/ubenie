@@ -421,8 +421,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <section id="benefits" className="px-4 py-20 bg-[#FEF7EC]/50">
-
+      <section id="benefits" className="px-4 py-20 bg-pink-50/50">
+        {/* <section id="benefits" className="px-4 py-20 bg-[#FEF7EC]/50"> */}
         <div className="container max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -772,7 +772,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* about section */}
       <section id="about" className="container mx-auto px-4 py-16 max-w-3xl">
@@ -803,19 +803,17 @@ export default function Home() {
 
               <p className="text-xl text-gray-700 leading-relaxed">
                 I&apos;m <span className="font-semibold">Luka</span>, the
-                creator of <span className="font-semibold">Ubenie</span>.
-                I&apos;ve built{" "}
-                <span className="font-semibold underline">
-                  multiple startups
-                </span>{" "}
-                and helped businesses grow their online presence.
+                creator of <span className="font-semibold">Ubenie</span>. I used
+                to <span className="font-semibold underline">hate SEO</span> .
+                Finding keywords, writing content, and optimizing for SEO was a
+                pain.
               </p>
             </div>
           </div>
 
           <div className="mt-4 md:mt-8">
             <p className="text-xl text-gray-700 leading-relaxed">
-              I learned that{" "}
+              Right
               <span className="font-semibold">
                 content is a goldmine of opportunities
               </span>
@@ -855,7 +853,7 @@ export default function Home() {
             </div>
 
             <p className="text-lg text-gray-600 leading-relaxed pt-4">
-              We&apos;re building Ubenie for{" "}
+              I&apos;m building Ubenie for{" "}
               <span className="font-semibold underline">
                 hundreds of people
               </span>{" "}
