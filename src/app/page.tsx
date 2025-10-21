@@ -10,11 +10,11 @@ import {
   Image as ImageIcon,
   Megaphone,
   Youtube,
-  Workflow,
 } from "lucide-react";
 
 import WaitlistButton from "./components/WaitlistButton";
 import FAQItem from "./components/FAQItem";
+import PricingCalculator from "./components/PricingCalculator";
 
 import bing from "../../public/logos/bing.svg";
 import claude from "../../public/logos/claude-ai-icon.svg";
@@ -421,7 +421,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="benefits" className="px-4 py-20 bg-pink-50/50">
+      <section id="benefits" className="px-4 py-20 bg-pink-50/30">
         {/* <section id="benefits" className="px-4 py-20 bg-[#FEF7EC]/50"> */}
         <div className="container max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -733,7 +733,7 @@ export default function Home() {
                   visibility.
                 </p>
               </div>
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg p-6 text-center">
+              <div className="bg-gray-50 rounded-lg p-6 text-center">
                 <div className="relative inline-flex items-center justify-center w-32 h-32 mb-3">
                   <svg className="transform -rotate-90 w-32 h-32">
                     <circle
@@ -774,6 +774,266 @@ export default function Home() {
         </div>
       </section>
 
+      {/* pricing section */}
+      <section className="container mx-auto px-4 py-20 max-w-7xl">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            No Subscriptions. Pay for What You Use.
+          </h2>
+          <p className="text-lg text-gray-500 max-w-2xl mx-auto">
+            Buy credits once, use them whenever you need. No monthly
+            commitments, no automatic renewals. Credits never expire.
+          </p>
+
+          <div className="flex items-center justify-center bg-pink-50 w-fit mx-auto rounded-lg p-4 mt-4">
+            <p className="text-gray-900">
+              🎁 We care about our{" "}
+              <span className="font-semibold ">early adopters</span>, so
+              we&apos;ve prepared{" "}
+              <span className="font-semibold underline">50% discount</span> for
+              the early birds.
+            </p>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+          {/* Free Trial */}
+          <div className="bg-[#FEF7EC] rounded-2xl p-8 flex flex-col ">
+            <div className="mb-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Free Trial
+              </h3>
+              <div className="flex items-baseline gap-1">
+                <span className="text-5xl font-bold text-gray-900">100</span>
+                <span className="text-2xl text-gray-600">credits</span>
+              </div>
+              <p className="text-sm text-gray-600 mt-1">
+                No credit card required
+              </p>
+            </div>
+
+            <div className="space-y-3 flex-grow mb-6">
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-900">Complete keyword research</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-900">
+                  Generate{" "}
+                  <span className="font-semibold">2 sample articles</span>
+                </span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-900">Test all features</span>
+              </div>
+              <div className="pt-4 border-t border-gray-300"></div>
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-900">Unlimited Projects</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-900">All 6 Integrations</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-900">Priority Support</span>
+              </div>
+            </div>
+
+            <WaitlistButton className="w-full bg-black text-white py-3 px-6 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
+              Start Free Trial
+            </WaitlistButton>
+          </div>
+
+          {/* Main Plan - Most Popular */}
+          <div className="bg-[#E6F7F5] rounded-2xl p-8 flex flex-col border-2 border-black relative">
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 text-black border-2 border-black bg-white px-4 py-1 rounded-full text-sm font-semibold">
+              Most Popular
+            </div>
+            <div className="mb-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Standard
+              </h3>
+              <div className="flex items-baseline gap-2">
+                <span className="text-2xl font-bold text-gray-400 relative">
+                  $178
+                  <div className="absolute bottom-[50%] left-0 w-full h-[2px] bg-gray-400 translate-y-1/2"></div>
+                </span>
+                <span className="text-5xl font-bold text-gray-900">$89</span>
+              </div>
+              <p className="text-sm text-gray-600 mt-1">
+                1,000 credits - one-time payment
+              </p>
+            </div>
+
+            <div className="space-y-3 flex-grow mb-6">
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-900">
+                  <span className="font-semibold">~30-40 articles</span> per
+                  month
+                </span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-900">
+                  AI-Generated{" "}
+                  <span className="font-semibold">1,200-3,000 word</span>{" "}
+                  articles
+                </span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-900">
+                  Automatic keyword research
+                </span>
+              </div>
+              <div className="pt-4 border-t border-gray-300"></div>
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-900">Unlimited Projects</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-900">Unlimited Team Members</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-900">
+                  All 6 Platform Integrations
+                </span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-900">
+                  SEO Optimization & Scoring
+                </span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-900">
+                  AI Images & YouTube Embeds
+                </span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-900">Unlimited Article Edits</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-900 flex items-center gap-2">
+                  Credits Never Expire
+                  <span className="bg-black text-white text-xs px-2 py-0.5 rounded flex items-center gap-1">
+                    New 🔥
+                  </span>
+                </span>
+              </div>
+            </div>
+
+            <WaitlistButton className="w-full bg-black text-white py-3 px-6 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
+              Get Started
+            </WaitlistButton>
+            <p className="text-xs text-gray-500 text-center mt-3">
+              Optional: Enable auto-refill (disabled by default)
+            </p>
+          </div>
+
+          {/* Premium Plan */}
+          <div className="bg-[#FFFBEB] rounded-2xl p-8 flex flex-col ">
+            <div className="mb-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Premium
+              </h3>
+              <div className="flex items-baseline gap-2">
+                <span className="text-2xl font-bold text-gray-400 relative">
+                  $398
+                  <div className="absolute bottom-[50%] left-0 w-full h-[2px] bg-gray-400 translate-y-1/2"></div>
+                </span>
+                <span className="text-5xl font-bold text-gray-900">$199</span>
+              </div>
+              <p className="text-sm text-gray-600 mt-1">
+                2,500 credits - one-time payment
+              </p>
+              <div className="mt-2 inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full font-semibold">
+                Save $24
+              </div>
+            </div>
+
+            <div className="space-y-3 flex-grow mb-6">
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-900">
+                  <span className="font-semibold">~75-100 articles</span> per
+                  month
+                </span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-900">
+                  AI-Generated{" "}
+                  <span className="font-semibold">1,200-3,000 word</span>{" "}
+                  articles
+                </span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-900">
+                  Automatic keyword research
+                </span>
+              </div>
+              <div className="pt-4 border-t border-gray-300"></div>
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-900">Unlimited Projects</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-900">Unlimited Team Members</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-900">
+                  All 6 Platform Integrations
+                </span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-900">
+                  SEO Optimization & Scoring
+                </span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-900">
+                  AI Images & YouTube Embeds
+                </span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-900">Unlimited Article Edits</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle2 className="w-5 h-5 text-gray-900 mt-0.5 flex-shrink-0" />
+                <span className="text-gray-900">Credits Never Expire</span>
+              </div>
+            </div>
+
+            <WaitlistButton className="w-full bg-black text-white py-3 px-6 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
+              Get Started
+            </WaitlistButton>
+            <p className="text-xs text-gray-500 text-center mt-3">
+              Optional: Enable auto-refill (disabled by default)
+            </p>
+          </div>
+        </div>
+
+        {/* Pricing Calculator Widget */}
+        {/* <PricingCalculator /> */}
+      </section>
+
       {/* about section */}
       <section id="about" className="container mx-auto px-4 py-16 max-w-3xl">
         <div className="bg-indigo-50 rounded-3xl p-8 md:p-12">
@@ -797,7 +1057,7 @@ export default function Home() {
               <div>
                 <h3 className="text-2xl md:text-4xl font-bold text-gray-900 mb-2 relative inline-block">
                   Hey, Entrepreneur 👋
-                  <span className="absolute bottom-[-4px] left-0 w-full h-1 bg-red-400 rounded"></span>
+                  <span className="absolute bottom-[-4px] left-0 w-full h-1 bg-indigo-300 rounded"></span>
                 </h3>
               </div>
 

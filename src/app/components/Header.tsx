@@ -17,9 +17,6 @@ export default function Header() {
                 <Image src={logo} alt="ubenie" width={50} height={50} />
               </div>
               <span className="text-xl font-bold text-gray-900">ubenie</span>
-              <span className="ml-2 px-2 py-0.5 bg-gray-100 text-gray-700 text-sm rounded border border-gray-300">
-                AI
-              </span>
             </div>
           </Link>
 
